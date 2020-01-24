@@ -60,9 +60,19 @@ namespace CourseGradeCalculator
             counter++;
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        public static void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            DialogResult res = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                e.Cancel = false ;
+                Environment.Exit(0);
+
+            }
+            else
+            {
+                e.Cancel=true;
+            }
         }
     }
 }

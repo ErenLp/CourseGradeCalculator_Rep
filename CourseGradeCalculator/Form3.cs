@@ -43,7 +43,8 @@ namespace CourseGradeCalculator
 
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+            this.Hide();
+            f2.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -51,6 +52,11 @@ namespace CourseGradeCalculator
             this.Hide();
             f1.setUp(f2);
             f2.Show();
+        }
+
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1.Form1_FormClosing(sender, e);
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace CourseGradeCalculator
 {
+
     public partial class Form2 : Form
     {
         public static int x = 0;
@@ -65,7 +66,7 @@ namespace CourseGradeCalculator
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Form1.Form1_FormClosing(sender, e);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -73,5 +74,9 @@ namespace CourseGradeCalculator
             this.Hide();
             f1.Show();
         }
+
+
+
     }
+
 }
