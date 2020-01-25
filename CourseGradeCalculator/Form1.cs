@@ -67,12 +67,10 @@ namespace CourseGradeCalculator
             {
                 e.Cancel = false ;
                 Environment.Exit(0);
-
             }
-            else
-            {
+            else      
                 e.Cancel=true;
-            }
+            
         }
     }
 }
